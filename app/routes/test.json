@@ -1,0 +1,43 @@
+[{
+  "RegistrationNumber": "16ETCS002029",
+  "Subject1": {
+    "C1": 40,
+    "C2": 32,
+    "CES": 45,
+    "SEE": 49
+  },
+  "Subject2": {
+    "C1": 44,
+    "C2": 322,
+    "CES": 4315,
+    "SEE": 4329
+  },
+  "Subject3": {
+    "C1": 402,
+    "C2": 342,
+    "CES": 425,
+    "SEE": 419
+  },
+  "Total": 600
+}, {
+  "RegistrationNumber": "16ETCS0020232",
+  "Subject1": {
+    "C1": 450,
+    "C2": 392,
+    "CES": 455,
+    "SEE": 49
+  },
+  "Subject2": {
+    "C1": 44,
+    "C2": 322,
+    "CES": 4315,
+    "SEE": 4329
+  },
+  "Subject3": {
+    "C1": 402,
+    "C2": 342,
+    "CES": 425,
+    "SEE": 419
+  },
+  "Total": 700
+}]

@@ -1,0 +1,95 @@
+<div class="container">
+
+  <div class="center-card">
+
+    <div class="card box-border is-paddingless" style="background-color: transparent;">
+
+      <div class="card-content" ng-controller="mainCtrl as main">
+        <div class="field has-addons has-addons-centered">
+          <div class="control has-icons-left is-expanded ">
+            <input ng-model="main.searchText" class="input is-large search-box-border body-font" type="text"
+              placeholder="Search anyone by using anyfield" size="500" style="color: white; width:100%; background-color: transparent;" />
+            <span class="icon is-medium is-left">
+              <i class="fa fa-search"></i>
+            </span>
+
+          </div>
+          <p class="control">
+            <button class="button is-large is-white is-outlined" ng-click="main.toggle()">
+              Get Grades
+            </button>
+          </p>
+        </div>
+        <div class="table-container">
+
+          <table class="table  body-font is-hoverable is-narrow is-bordered is-fullwidth" style="background-color: transparent;  ">
+            <thead class="table-header">
+              <tr>
+                <th style="color: white;"></th>
+                <th style="color: white;"></th>
+                <th style="color: white;" colspan="4">{{ main.courses.Subject1 }}</th>
+                <th style="color: white;" colspan="4">{{ main.courses.Subject2 }}</th>
+                <th style="color: white;" colspan="4">{{ main.courses.Subject3}}</th>
+                  
+
+
+
+              </tr>
+              <th style="color: white;"><abbr title="Regstration Number">R. No.</abbr></th>
+              <th style="color: white;">Name</th>
+              <th style="color: white;"><abbr title="Component 1 Marks">C1</abbr></th>
+              <th style="color: white;"><abbr title="Component 2 Marks">C2</abbr></th>
+              <th style="color: white;"><abbr title="Total Marks in Continuous Evaluation System">CES</abbr></th>
+              <th style="color: white;"><abbr title="Semester End Exam Marks">SEE</abbr></th>
+
+
+              <th style="color: white;"><abbr title="Component 1 Marks">C1</abbr></th>
+              <th style="color: white;"><abbr title="Component 2 Marks">C2</abbr></th>
+              <th style="color: white;"><abbr title="Total Marks in Continuous Evaluation System">CES</abbr></th>
+              <th style="color: white;"><abbr title="Semester End Exam Marks">SEE</abbr></th>
+
+
+              <th style="color: white;"><abbr title="Component 1 Marks">C1</abbr></th>
+              <th style="color: white;"><abbr title="Component 2 Marks">C2</abbr></th>
+              <th style="color: white;"><abbr title="Total Marks in Continuous Evaluation System">CES</abbr></th>
+              <th style="color: white;"><abbr title="Semester End Exam Marks">SEE</abbr></th>
+
+
+
+
+
+              <th style="color: white;" ng-show="main.showG"><abbr title="Cumulative Grade Point Average">CGPA</abbr></th>
+              <th style="color: white;" ng-show="main.showG"><abbr title="Overall Grade">OG</abbr></th>
+              </tr>
+            </thead>
+
+            <tbody ng-repeat="x in main.data | filter:main.searchText">
+              <tr>
+                <td>{{ x.RegistrationNumber }}</td>
+                <td>{{ x.Name }}</td>
+                <td>{{ x.C11 }}</td>
+                <td>{{ x.C21 }}</td>
+                <td>{{ x.CES1 }}</td>
+                <td>{{ x.SEE1 }}</td>
+                <td>{{ x.C12 }}</td>
+                <td>{{ x.C22 }}</td>
+                <td>{{ x.CES2 }}</td>
+                <td>{{ x.SEE2 }}</td>
+                <td>{{ x.C13}}</td>
+                <td>{{ x.C23}}</td>
+                <td>{{ x.CES3}}</td>
+                <td>{{ x.SEE3}}</td>
+                <td ng-show="main.showG">{{ x.CGPA}}</td>
+                <td ng-show="main.showG">{{ x.Grade}}</td>
+
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

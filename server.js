@@ -6,6 +6,8 @@ var port = process.env.PORT || 8080;
 var bodyParser = require('body-parser');
 var router = express.Router();
 var path = require('path');
+var appRoutes = require('./app/routes/api')(router);
+
 
 app.use(morgan('dev'));
 app.use(bodyParser.json()); // for parsing application/json
@@ -14,6 +16,8 @@ app.use(bodyParser.urlencoded({
 })); // for parsing application/x-www-form-urlencoded
 
 app.use(express.static(__dirname + '/public')); // GET /style.css etc
+app.use('/api', appRoutes);
+
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname + '/public/app/views/index.html'));
 });
