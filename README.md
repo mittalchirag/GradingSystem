@@ -3,7 +3,7 @@ Grading System for a Hypothetical University (part of PLP Assignment)
 
 ## Instructions to run the code on your local machine:
 1.  Install [nodejs](https://nodejs.org/en/)
-2.  Install [npm](https://wwww.npmjs.org)
+2.  Install [npm](https://www.npmjs.com/)
 3.  Clone the repo to your local machine
 4.  Change the directory to GradingSystem
 5.  Type `sudo npm install nodemon -g` in Terminal
